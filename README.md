@@ -1,24 +1,13 @@
-# README
+## 設定
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### 送信する側(Gmail)
+`app/mailers/notice_mailer.rb` で設定
 
-Things you may want to cover:
+### 受信する側の設定(任意)
+`config/enviroments/development.rb` で設置
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 実行コマンド
+```
+rails c
+NoticeMailer.sendmail_confirm.deliver
+```
